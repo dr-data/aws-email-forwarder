@@ -9,15 +9,14 @@
 # This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
 # OF ANY KIND, either express or implied. See the License for the specific
 # language governing permissions and limitations under the License.
+#
+#
+# File modified by mlgx <mlgx@coditis.com>.
 
 import os
 import boto3
 import email
-import re
 from botocore.exceptions import ClientError
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication
 from email.header import decode_header
 
 region = os.environ['Region']
@@ -94,9 +93,7 @@ def create_message(file_dict):
     return message
 
 def send_email(message):
-    aws_region = os.environ['Region']
-
-# Create a new SES client.
+    # Create a new SES client.
     client_ses = boto3.client('ses', region)
 
     # Send the email.

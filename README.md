@@ -16,5 +16,3 @@ Because the AWS script forwards you this:
 When you want this:
 
 ![fixed email](img-fix.png)
-
-Note: the email comes from `noreply@my-domain.com` but the `Reply-To` header is set to the original sender's address, so your response will go to the correct recipient.

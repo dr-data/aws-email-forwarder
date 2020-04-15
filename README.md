@@ -1,6 +1,6 @@
 # AWS Email Forwarder
 
-Inspired by [this article](https://aws.amazon.com/blogs/messaging-and-targeting/forward-incoming-email-to-an-external-destination/) from the AWS Blog and by [arithmetric/aws-lambda-ses-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder).
+Inspired by [this article](https://aws.amazon.com/blogs/messaging-and-targeting/forward-incoming-email-to-an-external-destination/) from the AWS Blog and by [arithmetric/aws-lambda-ses-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder) <sup>(unmaintained)</sup>.
 
 What it does:  
 Receive mail at `*@my-domain.com` and forward it to `me@mail-provider.com`.

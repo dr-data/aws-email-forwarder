@@ -64,14 +64,14 @@ def create_message(file_dict):
     original_sender = msg['From']
 
     # Remove fields that cause conflicts or must be overwritten.
-    for field in ['To', 'From', 'Reply-To', 'Return-Path']:
+    for field in [  'From', 'Reply-To',
+                    'Return-Path', 'Sender', 'Message-ID', 'DKIM-Signature']:
         try:
             del msg[field]
         except KeyError:
             pass
 
-    # Set To and From fields.
-    msg['To'] = recipient
+    # Set From field.
     msg['From'] = sender
     # Attempt to set the name of the original sender.
     if len(original_sender.split()) == 2:
